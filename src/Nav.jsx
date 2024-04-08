@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { FaBars } from 'react-icons/fa6';
 import { links } from './data';
+import { Link } from 'react-router-dom';
 
 const Nav = ({ scrollToView, nav, onSidebarOpen, sidebarOpen }) => {
   // sticky nav
@@ -42,14 +43,18 @@ const Nav = ({ scrollToView, nav, onSidebarOpen, sidebarOpen }) => {
 
         <ul className='signin-links'>
           <li>
-            <a className='signin-link primary-blue-300' href='#'>
-              Log in
-            </a>
+            <Link className='signin-link primary-blue-300' to={'/sign-in'}>
+              Log In
+            </Link>
           </li>
           <li>
-            <a className='signin-link-bg btn-blue btn' href='#'>
+            <Link
+              to={'/sign-up'}
+              className='signin-link-bg btn-blue btn'
+              href='#'
+            >
               Try for free
-            </a>
+            </Link>
           </li>
         </ul>
         {!sidebarOpen && (

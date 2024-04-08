@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { FaXmark } from 'react-icons/fa6';
 import { links } from './data';
+import { Link } from 'react-router-dom';
 
 function Sidebar({ sidebarOpen, onSidebarClose, scrollToView }) {
   const sidebar = useRef(null);
@@ -43,6 +44,37 @@ function Sidebar({ sidebarOpen, onSidebarClose, scrollToView }) {
               </a>
             </li>
           ))}
+          <li>
+            <Link className='signin-link primary-blue-300' to={'/sign-in'}>
+              Log In
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={'/sign-up'}
+              className='signin-link-bg btn-blue btn'
+              href='#'
+            >
+              Try for free
+            </Link>
+          </li>
+        </ul>
+
+        <ul className='.sidebar-links signin-links'>
+          <li>
+            <Link className='signin-link primary-blue-300' to={'/sign-in'}>
+              Log In
+            </Link>
+          </li>
+          <li>
+            <Link
+              to={'/sign-up'}
+              className='signin-link-bg btn-blue btn'
+              href='#'
+            >
+              Try for free
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
